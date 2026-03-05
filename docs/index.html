@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Element | Software Dev</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #3498db;
+            --bg: #f4f7f6;
+        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg); margin: 0; padding: 40px; color: #333; }
+        
+        .container { max-width: 1100px; margin: auto; text-align: center; }
+        
+        .intro-section { margin-bottom: 50px; }
+        .intro-section h1 { font-size: 2.5rem; color: var(--primary); margin-bottom: 10px; }
+        .intro-section p { font-size: 1.1rem; max-width: 700px; margin: auto; line-height: 1.6; color: #666; }
+
+        .team-grid { 
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            gap: 25px; 
+        }
+
+        .team-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            width: 220px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            border-bottom: 4px solid var(--accent);
+        }
+
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            background: #ddd;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            font-size: 1.5rem;
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+        }
+
+        .team-card h2 { font-size: 1.4rem; margin: 10px 0 5px; color: var(--primary); }
+        .team-card h4 { font-size: 0.9rem; color: var(--accent); text-transform: uppercase; margin-bottom: 15px; letter-spacing: 1px; }
+        .team-card p { font-size: 0.9rem; line-height: 1.5; color: #777; }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="intro-section">
+            <h1>Team Element</h1>
+            <p>
+                Born in the labs of the Software Development Department, <strong>Team Element</strong> was forged to bridge the gap between complex backend logic and intuitive user experiences. Our mission is to transform raw requirements into scalable, high-performance applications through collaborative engineering and agile methodology.
+            </p>
+        </div>
+
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="profile-pic">A</div>
+                <h2>Aayush</h2>
+                <h4>Lead Architect</h4>
+                <p>Specializes in systems security and network infrastructure. Ensures our software is hardened against vulnerabilities from day one.</p>
+            </div>
+
+            <div class="team-card">
+                <div class="profile-pic">G</div>
+                <h2>Gage</h2>
+                <h4>Backend Engineer</h4>
+                <p>The master of logic and API integration. Gage handles the heavy lifting of data processing and server-side optimization.</p>
+            </div>
+
+            <div class="team-card">
+                <div class="profile-pic">D</div>
+                <h2>Devna</h2>
+                <h4>UI/UX Specialist</h4>
+                <p>Focused on the human element. Devna ensures that our code isn't just functional, but accessible and aesthetically pleasing.</p>
+            </div>
+
+            <div class="team-card">
+                <div class="profile-pic">J</div>
+                <h2>Jorge</h2>
+                <h4>Full-Stack Dev</h4>
+                <p>A versatile coder bridging the gap between front and back end. Jorge excels at rapid prototyping and debugging complex workflows.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
