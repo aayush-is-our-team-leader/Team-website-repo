@@ -7,8 +7,9 @@
     <style>
         :root {
             --primary: #2c3e50;
-            --accent: #27ae60; /* Slightly darker green for text contrast */
-            --mint: #e0f2f1;   /* Classic Mint Green background */
+            --accent: #27ae60;
+            /* Update this line for Blue Mint */
+            --mint: #b2dfdb;  
             --white: #ffffff;
         }
         
@@ -41,7 +42,6 @@
             color: #444; 
         }
 
-        /* Forces exactly 4 blocks in one line */
         .team-grid { 
             display: grid;
             grid-template-columns: repeat(4, 1fr); 
@@ -90,7 +90,6 @@
         }
         .team-card p { font-size: 0.95rem; line-height: 1.5; color: #666; }
 
-        /* Responsive: Stack them on mobile devices */
         @media (max-width: 900px) {
             .team-grid { grid-template-columns: repeat(2, 1fr); }
         }
@@ -129,8 +128,8 @@
                 <h2>Gage</h2>
                 <span class="role">System Engineer</span>
                 <p>Specializes in technical logic and system-level programming. Ensures that the software core is robust and highly efficient.</p>
-            </div>
-
+                </div>
+            
             <div class="team-card">
                 <div class="profile-pic">J</div>
                 <h2>Jorge</h2>
@@ -139,6 +138,5 @@
             </div>
         </div>
     </div>
-
 </body>
 </html>
