@@ -3,55 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Element | Our Mission</title>
+    <title>Team Element | Projects & Tools</title>
     <style>
         :root {
             --primary: #2c3e50;
             --accent: #27ae60;
             --mint: #b2dfdb; 
             --white: #ffffff;
+            --text: #333;
         }
         body { 
             font-family: 'Segoe UI', Arial, sans-serif; 
             background-color: var(--mint); 
             margin: 0; 
             padding: 40px 20px; 
-            color: #333; 
+            color: var(--text); 
         }
-        .container { max-width: 1100px; margin: auto; }
+        .container { max-width: 1000px; margin: auto; }
         
-        .nav-header { text-align: left; margin-bottom: 20px; }
-        .nav-header a { text-decoration: none; color: var(--primary); font-weight: bold; font-size: 0.9rem; }
+        .nav-header { margin-bottom: 20px; }
+        .nav-header a { text-decoration: none; color: var(--primary); font-weight: bold; }
 
-        /* Team Section Styles */
-        .section-box {
+        .main-card {
             background: var(--white);
-            padding: 40px;
+            padding: 50px;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
-        h1 { color: var(--primary); text-align: center; font-size: 2.5rem; margin-bottom: 10px; }
-        .subtitle { text-align: center; color: #666; margin-bottom: 40px; font-style: italic; }
+        h1 { color: var(--primary); text-align: center; font-size: 2.8rem; margin-bottom: 5px; }
+        .subtitle { text-align: center; color: #666; margin-bottom: 40px; font-size: 1.1rem; }
 
+        /* Clean Team Grid - No blue boxes */
         .team-grid { 
             display: grid;
             grid-template-columns: repeat(4, 1fr); 
-            gap: 15px; 
-            margin-top: 20px;
+            gap: 20px; 
+            margin-bottom: 50px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 40px;
         }
 
-        .member-card {
-            text-align: center;
-            padding: 20px;
-            border-right: 1px solid #eee;
-        }
-        .member-card:last-child { border-right: none; }
-
-        .initials-circle {
-            width: 70px;
-            height: 70px;
+        .member { text-align: center; }
+        .circle {
+            width: 80px;
+            height: 80px;
             background: var(--primary);
             color: white;
             border-radius: 50%;
@@ -59,40 +55,39 @@
             align-items: center;
             justify-content: center;
             font-weight: bold;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             margin: 0 auto 15px;
         }
+        .member h3 { margin: 5px 0; color: var(--primary); }
+        .member .role { color: var(--accent); font-size: 0.8rem; font-weight: bold; text-transform: uppercase; }
 
-        .member-card h3 { margin: 5px 0; color: var(--primary); font-size: 1.2rem; }
-        .role { color: var(--accent); font-size: 0.8rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
-
-        /* Project Highlight Styles */
-        .project-highlight {
+        /* Projects & Tools Section */
+        .projects-section { margin-top: 40px; }
+        .project-item {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-left: 4px solid var(--accent);
+            background: #f9f9f9;
+            border-radius: 0 10px 10px 0;
+        }
+        .project-item h2 { margin-top: 0; color: var(--primary); font-size: 1.4rem; }
+        .project-item p { line-height: 1.6; color: #555; }
+        
+        .tool-tags { margin-top: 10px; }
+        .tag {
+            display: inline-block;
             background: var(--primary);
             color: white;
-            padding: 30px;
+            padding: 4px 12px;
             border-radius: 15px;
-            margin-top: 40px;
-            display: flex;
-            align-items: center;
-            gap: 30px;
-        }
-        .project-text { flex: 2; }
-        .project-badge { 
-            flex: 1; 
-            background: rgba(255,255,255,0.1); 
-            padding: 20px; 
-            border-radius: 10px; 
-            text-align: center;
-            border: 1px dashed var(--accent);
+            font-size: 0.75rem;
+            margin-right: 5px;
         }
 
-        footer { text-align: center; margin-top: 50px; font-size: 0.8rem; color: #556b69; }
+        footer { text-align: center; margin-top: 40px; font-size: 0.8rem; color: #556b69; }
 
-        @media (max-width: 850px) {
+        @media (max-width: 768px) {
             .team-grid { grid-template-columns: repeat(2, 1fr); }
-            .member-card { border: none; margin-bottom: 20px; }
-            .project-highlight { flex-direction: column; }
         }
     </style>
 </head>
@@ -100,46 +95,68 @@
 
     <div class="container">
         <div class="nav-header">
-            <a href="index.html">← Back to Home</a>
+            <a href="index.html">← Back to Summary</a>
         </div>
 
-        <div class="section-box">
-            <h1>Meet Team Element</h1>
+        <div class="main-card">
+            <h1>Team Element</h1>
             <p class="subtitle">Software Engineering | MSU Denver 2026</p>
 
             <div class="team-grid">
-                <div class="member-card">
-                    <div class="initials-circle" style="background: var(--accent);">D</div>
+                <div class="member">
+                    <div class="circle" style="background: var(--accent);">D</div>
                     <h3>Devna</h3>
-                    <span class="role">Project Manager</span>
+                    <div class="role">Project Manager</div>
                 </div>
-                <div class="member-card">
-                    <div class="initials-circle">A</div>
+                <div class="member">
+                    <div class="circle">A</div>
                     <h3>Aayush</h3>
-                    <span class="role">Security Architect</span>
+                    <div class="role">Security Architect</div>
                 </div>
-                <div class="member-card">
-                    <div class="initials-circle">G</div>
+                <div class="member">
+                    <div class="circle">G</div>
                     <h3>Gage</h3>
-                    <span class="role">Systems Engineer</span>
+                    <div class="role">Systems Engineer</div>
                 </div>
-                <div class="member-card">
-                    <div class="initials-circle">J</div>
+                <div class="member">
+                    <div class="circle">J</div>
                     <h3>Jorge</h3>
-                    <span class="role">Lead Developer</span>
+                    <div class="role">Lead Developer</div>
                 </div>
             </div>
-        </div>
 
-        <div class="project-highlight">
-            <div class="project-text">
-                <h2 style="color: var(--accent); margin-top: 0;">Featured Project: Web Scraper Tool</h2>
-                <p>Our team developed a robust data extraction engine designed to navigate complex web structures. By implementing custom parsing logic and error-handling protocols, we automated the collection of unstructured data, transforming it into actionable intelligence for our software development pipeline.</p>
-            </div>
-            <div class="project-badge">
-                <div style="font-size: 0.8rem; text-transform: uppercase; margin-bottom: 5px;">Primary Stack</div>
-                <div style="font-weight: bold;">Python / BeautifulSoup</div>
-                <div style="font-size: 1.2rem; margin-top: 10px;">⚡</div>
+            <div class="projects-section">
+                <h2 style="text-align: center; margin-bottom: 30px;">Our Portfolio & Tools</h2>
+
+                <div class="project-item">
+                    <h2>Web Scraper & Data Automation Tool</h2>
+                    <p>A high-performance Python engine designed to automate data extraction. It features robust error handling and structured output, allowing our team to process large-scale web data efficiently for software analysis.</p>
+                    <div class="tool-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">BeautifulSoup</span>
+                        <span class="tag">Automation</span>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <h2>Security Audit Toolkit</h2>
+                    <p>A suite of internal scripts used for network auditing and system hardening. Developed to identify misconfigurations and backdoors, ensuring our deployment environments meet CCDC defensive standards.</p>
+                    <div class="tool-tags">
+                        <span class="tag">Nmap</span>
+                        <span class="tag">Linux</span>
+                        <span class="tag">Security Bash</span>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <h2>Zero-Trust Network Lab</h2>
+                    <p>Architected a secure development environment utilizing Tailscale for peer-to-peer mesh networking, ensuring all team collaborations are encrypted and isolated from public LAN vulnerabilities.</p>
+                    <div class="tool-tags">
+                        <span class="tag">Tailscale</span>
+                        <span class="tag">Networking</span>
+                        <span class="tag">Virtualization</span>
+                    </div>
+                </div>
             </div>
         </div>
 
